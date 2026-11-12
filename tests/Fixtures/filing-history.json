@@ -1,0 +1,52 @@
+{
+  "kind": "filing-history",
+  "filing_history_status": "filing-history-available",
+  "items_per_page": 25,
+  "start_index": 0,
+  "total_count": 3,
+  "items": [
+    {
+      "transaction_id": "MzAwMDAwMDAwMWV4YW1wbGU",
+      "category": "confirmation-statement",
+      "type": "CS01",
+      "date": "2026-03-02",
+      "description": "confirmation-statement-with-no-updates",
+      "description_values": {
+        "made_up_date": "2026-02-28"
+      },
+      "pages": 3,
+      "links": {
+        "self": "/company/04567890/filing-history/MzAwMDAwMDAwMWV4YW1wbGU"
+      }
+    },
+    {
+      "transaction_id": "MzAwMDAwMDAwMmV4YW1wbGU",
+      "category": "accounts",
+      "type": "AA",
+      "date": "2026-05-20",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "description_values": {
+        "made_up_date": "2025-09-30"
+      },
+      "pages": 5,
+      "links": {
+        "self": "/company/04567890/filing-history/MzAwMDAwMDAwMmV4YW1wbGU"
+      }
+    },
+    {
+      "transaction_id": "MzAwMDAwMDAwM2V4YW1wbGU",
+      "category": "officers",
+      "type": "TM02",
+      "date": "2019-06-03",
+      "description": "termination-secretary-company-with-name-termination-date",
+      "description_values": {
+        "officer_name": "REDACTED",
+        "termination_date": "2019-05-31"
+      },
+      "pages": 1,
+      "links": {
+        "self": "/company/04567890/filing-history/MzAwMDAwMDAwM2V4YW1wbGU"
+      }
+    }
+  ]
+}

@@ -3,6 +3,10 @@
 declare(strict_types=1);
 
 use ACTTraining\CompaniesHouse\Contracts\CompaniesHouseClient;
+use ACTTraining\CompaniesHouse\Contracts\Transport;
+use ACTTraining\CompaniesHouse\Data\Company;
+use ACTTraining\CompaniesHouse\Facades\CompaniesHouse;
+use ACTTraining\CompaniesHouse\Http\Gateway;
 
 /*
  * Contract tests against the real Companies House API. They run weekly in CI
@@ -18,12 +22,34 @@ beforeEach(function (): void {
     }
 
     config()->set('companies-house.api_key', $key);
-    app()->forgetInstance(CompaniesHouseClient::class);
+
+    foreach ([Transport::class, Gateway::class, CompaniesHouseClient::class] as $binding) {
+        app()->forgetInstance($binding);
+    }
+
+    CompaniesHouse::clearResolvedInstances();
 });
 
-it('authenticates against the live API', function (): void {
-    $response = app(CompaniesHouseClient::class)->request()->get('/search/companies', ['q' => 'ACT', 'items_per_page' => 1]);
+it('finds companies by name and maps a full profile', function (): void {
+    $hits = CompaniesHouse::search('training', limit: 5);
 
-    expect($response->status())->toBe(200)
-        ->and($response->header('X-Ratelimit-Limit'))->not->toBe('');
+    expect($hits)->not->toBeEmpty();
+
+    $company = CompaniesHouse::find($hits->first()->number);
+
+    expect($company)->toBeInstanceOf(Company::class)
+        ->and($company->number)->toBe($hits->first()->number)
+        ->and($company->name)->not->toBe('')
+        ->and($company->raw)->toHaveKeys(['company_number', 'company_name', 'company_status', 'date_of_creation']);
+});
+
+it('runs an advanced search', function (): void {
+    $hits = CompaniesHouse::advancedSearch()->status('active')->sic('85590')->location('Cardiff')->get(5);
+
+    expect($hits)->not->toBeEmpty()
+        ->and($hits->first()->sicCodes->pluck('code'))->toContain('85590');
+});
+
+it('answers a missing company with null', function (): void {
+    expect(CompaniesHouse::find('00000000'))->toBeNull();
 });

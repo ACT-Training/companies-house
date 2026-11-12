@@ -1,0 +1,50 @@
+{
+  "items_per_page": 25,
+  "start_index": 0,
+  "total_results": 2,
+  "active_count": 1,
+  "ceased_count": 1,
+  "items": [
+    {
+      "kind": "individual-person-with-significant-control",
+      "name": "Ms Jane Officer EXAMPLE",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "nationality": "British",
+      "country_of_residence": "Wales",
+      "date_of_birth": {
+        "month": 1,
+        "year": 1970
+      },
+      "address": {
+        "address_line_1": "1 Example Street",
+        "locality": "Cardiff",
+        "postal_code": "CF10 1AA",
+        "country": "Wales"
+      },
+      "links": {
+        "self": "/company/04567890/persons-with-significant-control/individual/REDACTED"
+      }
+    },
+    {
+      "kind": "corporate-entity-person-with-significant-control",
+      "name": "SAMPLE HOLDINGS LTD",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2020-01-31",
+      "address": {
+        "address_line_1": "2 Sample Road",
+        "locality": "Cardiff",
+        "postal_code": "CF10 2AA",
+        "country": "Wales"
+      },
+      "links": {
+        "self": "/company/04567890/persons-with-significant-control/corporate-entity/REDACTED"
+      }
+    }
+  ]
+}

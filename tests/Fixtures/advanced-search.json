@@ -1,0 +1,50 @@
+{
+  "kind": "search#advanced-search",
+  "hits": 2,
+  "top_hit": {},
+  "items": [
+    {
+      "kind": "search-results#company",
+      "company_number": "04567890",
+      "company_name": "EXAMPLE TRAINING LTD",
+      "company_status": "active",
+      "company_type": "ltd",
+      "date_of_creation": "2003-09-15",
+      "registered_office_address": {
+        "address_line_1": "1 Example Street",
+        "locality": "Cardiff",
+        "postal_code": "CF10 1AA",
+        "country": "Wales",
+        "premises": "Unit 4"
+      },
+      "sic_codes": [
+        "85590",
+        "85600"
+      ],
+      "links": {
+        "company_profile": "/company/04567890"
+      }
+    },
+    {
+      "kind": "search-results#company",
+      "company_number": "05551234",
+      "company_name": "BRIDGEND BUILDERS LIMITED",
+      "company_status": "liquidation",
+      "company_type": "ltd",
+      "date_of_creation": "2005-10-03",
+      "registered_office_address": {
+        "address_line_1": "3 Market Way",
+        "locality": "Bridgend",
+        "postal_code": "CF31 1AA",
+        "country": "Wales"
+      },
+      "sic_codes": [
+        "41201",
+        "43210"
+      ],
+      "links": {
+        "company_profile": "/company/05551234"
+      }
+    }
+  ]
+}

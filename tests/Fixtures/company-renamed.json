@@ -1,0 +1,49 @@
+{
+  "company_number": "09876543",
+  "company_name": "NEW NAME SERVICES LTD",
+  "company_status": "active",
+  "type": "ltd",
+  "jurisdiction": "england-wales",
+  "date_of_creation": "2015-11-20",
+  "registered_office_address": {
+    "address_line_1": "7 Commercial Road",
+    "locality": "Newport",
+    "postal_code": "NP20 1AA",
+    "country": "Wales"
+  },
+  "sic_codes": [
+    "70229"
+  ],
+  "accounts": {
+    "next_due": "2027-06-30",
+    "next_made_up_to": "2026-09-30",
+    "overdue": false,
+    "accounting_reference_date": {
+      "day": "30",
+      "month": "09"
+    }
+  },
+  "confirmation_statement": {
+    "next_due": "2027-03-14",
+    "next_made_up_to": "2027-02-28",
+    "overdue": false,
+    "last_made_up_to": "2026-02-28"
+  },
+  "has_insolvency_history": false,
+  "has_charges": false,
+  "can_file": true,
+  "etag": "0000000000000000000000000000000000000000",
+  "links": {
+    "self": "/company/09876543",
+    "filing_history": "/company/09876543/filing-history",
+    "officers": "/company/09876543/officers",
+    "persons_with_significant_control": "/company/09876543/persons-with-significant-control"
+  },
+  "previous_company_names": [
+    {
+      "name": "OLD NAME SERVICES LTD",
+      "effective_from": "2015-11-20",
+      "ceased_on": "2024-03-01"
+    }
+  ]
+}

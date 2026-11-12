@@ -1,0 +1,50 @@
+{
+  "kind": "officer-list",
+  "items_per_page": 35,
+  "start_index": 0,
+  "total_results": 2,
+  "active_count": 1,
+  "resigned_count": 1,
+  "items": [
+    {
+      "name": "EXAMPLE, Jane Officer",
+      "officer_role": "director",
+      "appointed_on": "2003-09-15",
+      "occupation": "Director",
+      "nationality": "British",
+      "country_of_residence": "Wales",
+      "date_of_birth": {
+        "month": 1,
+        "year": 1970
+      },
+      "address": {
+        "address_line_1": "1 Example Street",
+        "locality": "Cardiff",
+        "postal_code": "CF10 1AA",
+        "country": "Wales"
+      },
+      "links": {
+        "officer": {
+          "appointments": "/officers/REDACTED/appointments"
+        }
+      }
+    },
+    {
+      "name": "SAMPLE, John Former",
+      "officer_role": "secretary",
+      "appointed_on": "2003-09-15",
+      "resigned_on": "2019-05-31",
+      "address": {
+        "address_line_1": "1 Example Street",
+        "locality": "Cardiff",
+        "postal_code": "CF10 1AA",
+        "country": "Wales"
+      },
+      "links": {
+        "officer": {
+          "appointments": "/officers/REDACTED/appointments"
+        }
+      }
+    }
+  ]
+}

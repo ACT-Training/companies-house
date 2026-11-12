@@ -1,0 +1,49 @@
+{
+  "kind": "search#companies",
+  "items_per_page": 20,
+  "start_index": 0,
+  "total_results": 2,
+  "page_number": 1,
+  "items": [
+    {
+      "kind": "searchresults#company",
+      "company_number": "04567890",
+      "title": "EXAMPLE TRAINING LTD",
+      "company_status": "active",
+      "company_type": "ltd",
+      "date_of_creation": "2003-09-15",
+      "address": {
+        "address_line_1": "1 Example Street",
+        "locality": "Cardiff",
+        "postal_code": "CF10 1AA",
+        "country": "Wales",
+        "premises": "Unit 4"
+      },
+      "address_snippet": "Unit 4 1 Example Street, Cardiff, CF10 1AA",
+      "description": "04567890 - Incorporated on 15 September 2003",
+      "links": {
+        "self": "/company/04567890"
+      }
+    },
+    {
+      "kind": "searchresults#company",
+      "company_number": "07654321",
+      "title": "OLD VALLEY TRADING LTD",
+      "company_status": "dissolved",
+      "company_type": "ltd",
+      "date_of_creation": "2011-06-01",
+      "date_of_cessation": "2024-11-19",
+      "address": {
+        "address_line_1": "22 Harbour Road",
+        "locality": "Swansea",
+        "postal_code": "SA1 1AA",
+        "country": "Wales"
+      },
+      "address_snippet": "22 Harbour Road, Swansea, SA1 1AA",
+      "description": "07654321 - Dissolved on 19 November 2024",
+      "links": {
+        "self": "/company/07654321"
+      }
+    }
+  ]
+}

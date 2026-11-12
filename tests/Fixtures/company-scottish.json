@@ -1,0 +1,42 @@
+{
+  "company_number": "SC123456",
+  "company_name": "EXAMPLE SCOTLAND LTD",
+  "company_status": "active",
+  "type": "ltd",
+  "jurisdiction": "scotland",
+  "date_of_creation": "2012-02-14",
+  "registered_office_address": {
+    "address_line_1": "10 Example Lane",
+    "locality": "Edinburgh",
+    "postal_code": "EH1 1AA",
+    "country": "Scotland"
+  },
+  "sic_codes": [
+    "62020"
+  ],
+  "accounts": {
+    "next_due": "2027-06-30",
+    "next_made_up_to": "2026-09-30",
+    "overdue": false,
+    "accounting_reference_date": {
+      "day": "30",
+      "month": "09"
+    }
+  },
+  "confirmation_statement": {
+    "next_due": "2027-03-14",
+    "next_made_up_to": "2027-02-28",
+    "overdue": false,
+    "last_made_up_to": "2026-02-28"
+  },
+  "has_insolvency_history": false,
+  "has_charges": false,
+  "can_file": true,
+  "etag": "0000000000000000000000000000000000000000",
+  "links": {
+    "self": "/company/SC123456",
+    "filing_history": "/company/SC123456/filing-history",
+    "officers": "/company/SC123456/officers",
+    "persons_with_significant_control": "/company/SC123456/persons-with-significant-control"
+  }
+}

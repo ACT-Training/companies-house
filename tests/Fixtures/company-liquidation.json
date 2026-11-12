@@ -1,0 +1,43 @@
+{
+  "company_number": "05551234",
+  "company_name": "BRIDGEND BUILDERS LIMITED",
+  "company_status": "liquidation",
+  "type": "ltd",
+  "jurisdiction": "england-wales",
+  "date_of_creation": "2005-10-03",
+  "registered_office_address": {
+    "address_line_1": "3 Market Way",
+    "locality": "Bridgend",
+    "postal_code": "CF31 1AA",
+    "country": "Wales"
+  },
+  "sic_codes": [
+    "41201",
+    "43210"
+  ],
+  "accounts": {
+    "next_due": "2027-06-30",
+    "next_made_up_to": "2026-09-30",
+    "overdue": false,
+    "accounting_reference_date": {
+      "day": "30",
+      "month": "09"
+    }
+  },
+  "confirmation_statement": {
+    "next_due": "2027-03-14",
+    "next_made_up_to": "2027-02-28",
+    "overdue": false,
+    "last_made_up_to": "2026-02-28"
+  },
+  "has_insolvency_history": true,
+  "has_charges": true,
+  "can_file": true,
+  "etag": "0000000000000000000000000000000000000000",
+  "links": {
+    "self": "/company/05551234",
+    "filing_history": "/company/05551234/filing-history",
+    "officers": "/company/05551234/officers",
+    "persons_with_significant_control": "/company/05551234/persons-with-significant-control"
+  }
+}
