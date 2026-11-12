@@ -9,7 +9,7 @@
         "api"
     ],
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Simon Barrett",

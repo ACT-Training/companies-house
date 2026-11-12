@@ -7,9 +7,6 @@
 - a way to link an app's own employer records to a company number (phase 3)
 - a scheduled refresh that raises events when a linked company changes (phase 3)
 
-The full specification is the
-[Companies House package: specification](https://claude.ai/artifact/UPBGVULGqjnJ9WzEyfwn72) doc.
-
 > **Status:** skeleton only. The service provider, config, contract, facade and exceptions exist; the resources,
 > DTOs, rate limiter, cache, fake and commands are still to build.
 
@@ -19,14 +16,6 @@ The full specification is the
 - Laravel 12 or 13
 
 ## Installation
-
-The package is private. Add the repository to the host app's `composer.json`, then require it:
-
-```json
-"repositories": [
-    { "type": "vcs", "url": "https://github.com/ACT-Training/companies-house" }
-]
-```
 
 ```bash
 composer require act-training/companies-house
@@ -85,5 +74,7 @@ recorded. Redact officer and PSC personal data before committing.
 
 ## Licence
 
-Proprietary; internal to ACT. Confirm the Companies House reuse and attribution terms before go-live and add any
+MIT. See [LICENSE](LICENSE).
+
+Company data comes from Companies House. Confirm its current reuse and attribution terms before go-live and add any
 required attribution text here.
