@@ -43,7 +43,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Only definitive answers (found, or a 404) are cached. Failures never are.
-    | Times are in seconds. Officer and PSC data must not exceed one hour.
+    | Times are in seconds. Officer and PSC times are capped at one hour.
     |
     */
 
@@ -55,6 +55,9 @@ return [
             'search' => (int) env('COMPANIES_HOUSE_CACHE_TTL_SEARCH', 60 * 60),
             'officers' => (int) env('COMPANIES_HOUSE_CACHE_TTL_OFFICERS', 60 * 60),
             'filings' => (int) env('COMPANIES_HOUSE_CACHE_TTL_FILINGS', 60 * 60),
+            'insolvency' => (int) env('COMPANIES_HOUSE_CACHE_TTL_INSOLVENCY', 60 * 60 * 24),
+            'charges' => (int) env('COMPANIES_HOUSE_CACHE_TTL_CHARGES', 60 * 60 * 24),
+            'psc' => (int) env('COMPANIES_HOUSE_CACHE_TTL_PSC', 60 * 60),
         ],
     ],
 

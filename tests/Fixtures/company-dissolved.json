@@ -1,0 +1,43 @@
+{
+  "company_number": "07654321",
+  "company_name": "OLD VALLEY TRADING LTD",
+  "company_status": "dissolved",
+  "type": "ltd",
+  "jurisdiction": "england-wales",
+  "date_of_creation": "2011-06-01",
+  "registered_office_address": {
+    "address_line_1": "22 Harbour Road",
+    "locality": "Swansea",
+    "postal_code": "SA1 1AA",
+    "country": "Wales"
+  },
+  "sic_codes": [
+    "47190"
+  ],
+  "accounts": {
+    "next_due": "2027-06-30",
+    "next_made_up_to": "2026-09-30",
+    "overdue": false,
+    "accounting_reference_date": {
+      "day": "30",
+      "month": "09"
+    }
+  },
+  "confirmation_statement": {
+    "next_due": "2027-03-14",
+    "next_made_up_to": "2027-02-28",
+    "overdue": false,
+    "last_made_up_to": "2026-02-28"
+  },
+  "has_insolvency_history": false,
+  "has_charges": false,
+  "can_file": false,
+  "etag": "0000000000000000000000000000000000000000",
+  "links": {
+    "self": "/company/07654321",
+    "filing_history": "/company/07654321/filing-history",
+    "officers": "/company/07654321/officers",
+    "persons_with_significant_control": "/company/07654321/persons-with-significant-control"
+  },
+  "date_of_cessation": "2024-11-19"
+}

@@ -1,0 +1,44 @@
+{
+  "company_number": "04567890",
+  "company_name": "EXAMPLE TRAINING LTD",
+  "company_status": "active",
+  "type": "ltd",
+  "jurisdiction": "england-wales",
+  "date_of_creation": "2003-09-15",
+  "registered_office_address": {
+    "address_line_1": "1 Example Street",
+    "locality": "Cardiff",
+    "postal_code": "CF10 1AA",
+    "country": "Wales",
+    "premises": "Unit 4"
+  },
+  "sic_codes": [
+    "85590",
+    "85600"
+  ],
+  "accounts": {
+    "next_due": "2027-06-30",
+    "next_made_up_to": "2026-09-30",
+    "overdue": false,
+    "accounting_reference_date": {
+      "day": "30",
+      "month": "09"
+    }
+  },
+  "confirmation_statement": {
+    "next_due": "2027-03-14",
+    "next_made_up_to": "2027-02-28",
+    "overdue": false,
+    "last_made_up_to": "2026-02-28"
+  },
+  "has_insolvency_history": false,
+  "has_charges": false,
+  "can_file": true,
+  "etag": "0000000000000000000000000000000000000000",
+  "links": {
+    "self": "/company/04567890",
+    "filing_history": "/company/04567890/filing-history",
+    "officers": "/company/04567890/officers",
+    "persons_with_significant_control": "/company/04567890/persons-with-significant-control"
+  }
+}

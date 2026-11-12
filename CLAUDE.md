@@ -9,14 +9,16 @@ without being asked.
 ## Layout
 
 - `src/Contracts/CompaniesHouseClient.php`: the only surface host apps depend on, with the facade.
-- `src/Client.php`: transport. Host-facing code must not reference it directly (an arch test enforces this).
+- `src/Client.php`: implements the contract. Host-facing code must not reference it directly (an arch test enforces this).
+- `src/Http/`: `HttpTransport` (the only class that calls Companies House), `RateLimiter`, and `Gateway` (caching and paging).
 - `src/Resources/`: one class per endpoint group (Companies, Search, Officers, Filings, Insolvency, Charges, Psc).
-- `src/Data/`: readonly DTOs (Company, Address, SicCode, Officer, FilingItem, SearchHit), each keeping `raw` JSON.
+- `src/Data/`: readonly DTOs, each keeping `raw` JSON. Map JSON through `Support\Payload`, never raw array access.
 - `src/Exceptions/`: everything extends `CompaniesHouseException` and implements `retryable()`. A 404 is `null`,
   not an exception.
 - `src/Testing/`: the `CompaniesHouse::fake()` implementation.
 - `src/Commands/`: `companies-house:*` artisan commands.
-- `tests/Fixtures/`: recorded API responses. Redact officer and PSC personal data.
+- `tests/Fixtures/`: API responses, loaded with `apiFixture()`. Currently synthetic; replace with redacted recordings.
+- `resources/sic-codes.php`: generated from the GOV.UK condensed SIC CSV; don't hand-edit.
 
 ## Rules
 
@@ -28,7 +30,7 @@ without being asked.
 ## Checks (all must pass before a commit)
 
 ```bash
-composer check            # duster lint, phpstan (level 8), pest
+composer check            # duster lint, phpstan (level 8), sloppy, pest
 npx prettier --check .
 ```
 

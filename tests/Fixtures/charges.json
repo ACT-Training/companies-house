@@ -1,0 +1,48 @@
+{
+  "etag": "0000000000000000000000000000000000000000",
+  "total_count": 2,
+  "unfiltered_count": 2,
+  "satisfied_count": 1,
+  "part_satisfied_count": 0,
+  "items": [
+    {
+      "charge_code": "055512340001",
+      "charge_number": 1,
+      "status": "outstanding",
+      "created_on": "2018-02-01",
+      "delivered_on": "2018-02-05",
+      "classification": {
+        "type": "charge-description",
+        "description": "A registered charge"
+      },
+      "persons_entitled": [
+        {
+          "name": "EXAMPLE BANK PLC"
+        }
+      ],
+      "links": {
+        "self": "/company/05551234/charges/REDACTED"
+      }
+    },
+    {
+      "charge_code": "055512340002",
+      "charge_number": 2,
+      "status": "fully-satisfied",
+      "created_on": "2010-03-01",
+      "delivered_on": "2010-03-04",
+      "satisfied_on": "2016-08-30",
+      "classification": {
+        "type": "charge-description",
+        "description": "Debenture"
+      },
+      "persons_entitled": [
+        {
+          "name": "SAMPLE FINANCE LTD"
+        }
+      ],
+      "links": {
+        "self": "/company/05551234/charges/REDACTED"
+      }
+    }
+  ]
+}

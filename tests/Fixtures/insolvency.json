@@ -1,0 +1,30 @@
+{
+  "etag": "0000000000000000000000000000000000000000",
+  "cases": [
+    {
+      "type": "creditors-voluntary-liquidation",
+      "number": "1",
+      "dates": [
+        {
+          "type": "wound-up-on",
+          "date": "2026-07-14"
+        }
+      ],
+      "practitioners": [
+        {
+          "name": "REDACTED",
+          "role": "proposed-liquidator",
+          "address": {
+            "address_line_1": "1 Example Street",
+            "locality": "Cardiff",
+            "postal_code": "CF10 1AA",
+            "country": "Wales"
+          }
+        }
+      ]
+    }
+  ],
+  "status": [
+    "liquidation"
+  ]
+}
