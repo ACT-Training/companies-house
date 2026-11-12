@@ -1,0 +1,43 @@
+name: Lint
+
+# Fails rather than committing fixes. The pre-commit hook runs `duster fix` and
+# Prettier on staged files, so a failure here means it was bypassed: run
+# `composer fix && npm run format` locally and push the result.
+
+on: [push]
+
+jobs:
+  duster:
+    name: Duster
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - name: Install dependencies
+        run: composer update --prefer-dist --no-interaction
+
+      - name: Run Duster
+        run: vendor/bin/duster lint
+
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check formatting
+        run: npx prettier --check .

@@ -1,0 +1,78 @@
+{
+    "name": "act-training/companies-house",
+    "description": "A headless Laravel client for the Companies House public data API, with a local Welsh company mirror and record linking.",
+    "keywords": [
+        "laravel",
+        "companies-house",
+        "uk",
+        "companies",
+        "api"
+    ],
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Simon Barrett",
+            "email": "simon@acttraining.org.uk"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/contracts": "^12.0|^13.0",
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "heyosseus/sloppy": "^1.8",
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.25",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-arch": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "tightenco/duster": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "ACTTraining\\CompaniesHouse\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ACTTraining\\CompaniesHouse\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test:live": "vendor/bin/pest --testsuite=Live",
+        "analyse": "vendor/bin/phpstan analyse --no-progress",
+        "lint": "vendor/bin/duster lint",
+        "fix": "vendor/bin/duster fix",
+        "check": [
+            "@lint",
+            "@analyse",
+            "@sloppy",
+            "@test"
+        ],
+        "sloppy": "@php vendor/bin/testbench sloppy:ci --scan --path=\"$PWD/src\" --path=\"$PWD/config\" --no-interaction"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ACTTraining\\CompaniesHouse\\CompaniesHouseServiceProvider"
+            ],
+            "aliases": {
+                "CompaniesHouse": "ACTTraining\\CompaniesHouse\\Facades\\CompaniesHouse"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,14 @@
+node_modules
+vendor
+build
+.phpunit.cache
+.git
+.idea
+package-lock.json
+composer.lock
+
+# PHP is formatted by Pint (via Duster), not Prettier
+*.php
+
+# Recorded Companies House responses must stay byte-for-byte as recorded
+tests/Fixtures/

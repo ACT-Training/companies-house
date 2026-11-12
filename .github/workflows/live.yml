@@ -1,0 +1,31 @@
+name: Live API contract
+
+# Runs the tests/Live suite against the real Companies House API, so a change
+# to a response shape is caught. Needs the COMPANIES_HOUSE_API_KEY repository
+# secret (a dev key, not production); without it every test skips.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  live:
+    name: Live contract tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - name: Install dependencies
+        run: composer update --prefer-dist --no-interaction
+
+      - name: Run live tests
+        run: vendor/bin/pest --testsuite=Live --ci
+        env:
+          COMPANIES_HOUSE_API_KEY: ${{ secrets.COMPANIES_HOUSE_API_KEY }}

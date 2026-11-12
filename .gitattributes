@@ -1,0 +1,27 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.md diff=markdown
+*.php diff=php
+
+/.github export-ignore
+/.husky export-ignore
+/scripts export-ignore
+/tests export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.gitleaks.toml export-ignore
+/.nvmrc export-ignore
+/.phpcs.xml.dist export-ignore
+/.prettierignore export-ignore
+/.prettierrc export-ignore
+/duster.json export-ignore
+/lint-staged.config.mjs export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/phpstan.neon.dist export-ignore
+/phpunit.xml.dist export-ignore
+/pint.json export-ignore
+/tlint.json export-ignore
+/CLAUDE.md export-ignore

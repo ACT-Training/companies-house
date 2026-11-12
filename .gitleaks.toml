@@ -1,0 +1,8 @@
+# Secret scanning for pre-commit (scripts/gitleaks-staged.sh via lint-staged)
+# and CI (.github/workflows/gitleaks.yml). The package handles a Companies
+# House API key and recorded API fixtures, so both paths are scanned.
+
+title = "companies-house"
+
+[extend]
+useDefault = true

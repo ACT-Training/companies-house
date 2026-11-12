@@ -1,0 +1,25 @@
+name: Secret scan
+
+on: [push]
+
+jobs:
+  gitleaks:
+    name: gitleaks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install gitleaks
+        env:
+          GITLEAKS_VERSION: 8.30.1
+        run: |
+          curl -sSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+              | sudo tar -xz -C /usr/local/bin gitleaks
+
+      # The repository is small, so the whole history is scanned every time.
+      # --diff-merges=first-parent makes a merge show what the branch gained,
+      # so a secret pasted into a conflict resolution is not missed.
+      - name: Scan history
+        run: gitleaks git . --no-banner --verbose --redact --config .gitleaks.toml --log-opts="--diff-merges=first-parent"

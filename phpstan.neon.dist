@@ -1,0 +1,21 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+    # Keep the result cache inside the checkout rather than the shared system temp dir.
+    tmpDir: build/phpstan
+
+    # The spec's floor, so PHP 8.4+ syntax is caught even when running on a newer PHP.
+    phpVersion: 80300
+
+    level: 8
+
+    paths:
+        - src
+        - config
+
+    treatPhpDocTypesAsCertain: false
+
+    # The package's own config directory, so Larastan allows env() there.
+    configDirectories:
+        - config

@@ -1,0 +1,15 @@
+{
+    "name": "companies-house",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "prepare": "husky"
+    },
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.3",
+        "prettier": "^3.6.2"
+    }
+}
