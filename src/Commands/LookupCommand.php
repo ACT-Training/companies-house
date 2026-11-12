@@ -19,10 +19,11 @@ final class LookupCommand extends Command
 
     public function handle(CompaniesHouseClient $client): int
     {
-        $number = $this->argument('number');
+        $argument = $this->argument('number');
+        $number = is_string($argument) ? $argument : '';
 
         try {
-            $company = $client->interactive()->find(is_string($number) ? $number : '');
+            $company = $client->interactive()->find($number);
         } catch (CompaniesHouseException $exception) {
             $this->components->error($exception->getMessage());
 
